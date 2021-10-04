@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+         let input = document.querySelector('.correct');
+          input.addEventListener('click', function() {
+          input.style.backgroundColor = 'green';
+          document.querySelector('#feedback').innerHTML = 'correct!';
+
+        });
+
+        let inc_input = document.querySelectorAll('.incorrect');
+        for(let i = 0 ; i < inc_input.length; i++)
+         {
+          inc_input[i].addEventListener('click', function() {
+          inc_input[i].style.backgroundColor = 'red';
+          document.querySelector('#feedback').innerHTML = 'incorrect!';
+         });
+         }
+
+        let value1 = document.querySelector('#name');
+        let submit = document.querySelector('.incsub');
+        submit.addEventListener('click', function() {
+
+        if(value1.value === 'india') {
+        submit.style.backgroundColor = 'green';
+        document.querySelector('#feedback2').innerHTML = 'correct!';
+        }
+        else
+          {
+        submit.style.backgroundColor = 'red';
+        document.querySelector('#feedback2').innerHTML = 'incorrect!';
+          }
+        });
+
+        });
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the approximiate ratio of sheep to people in New Zealand</h3>
+                <button type = 'button' class = 'correct'>6 people per 1 sheep</button>
+                <button type = 'button' class = 'incorrect'>2 people per 1 sheep</button>
+                <button type = 'button' class = 'incorrect'>1 people per 2 sheep</button>
+                <button type = 'button' class = 'incorrect'>1 people per 6 sheep</button>
+                <p1 id = "feedback"></p1>
+                </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In which county it is legal to store a Guinea Pig</h3>
+                <input id = 'name' type="text">
+                <button class = 'incsub' type="submit">Confirm</button>
+                <p1 id = "feedback2"></p1>
+
+                <!-- TODO: Add free response question here -->
+
+            </div>
+
+        </div>
+    </body>
+</html>

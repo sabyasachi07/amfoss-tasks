@@ -1,0 +1,1 @@
+SELECT COUNT(ratings.rating) AS '' FROM ratings, movies WHERE movies.id = ratings.movie_id AND ratings.rating = 10.0;

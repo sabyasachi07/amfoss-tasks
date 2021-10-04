@@ -1,0 +1,59 @@
+body {
+    background-color: grey;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+    text-align: center;
+}
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: black;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: lightblue;
+
+}
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-centered {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-button {
+  position: absolute;
+  top: 60%;
+  left:22%;
+}
+
+img{
+  width: 100px;
+  height: 200px;
+}
+
+.bottom-up{
+  position: absolute;
+  top: 85%;
+  left: 45%;
+}

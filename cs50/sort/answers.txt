@@ -1,0 +1,12 @@
+sort1 uses: Bubble sort
+
+How do you know?: Takes 11sec of time when running  one loop on sorted50000 texts compared to sort3
+
+sort2 uses: Merge sort
+
+How do you know?: In Sorting of random 5000 numbers,It takes 0.016sec which is fastest among all sorting methods.
+
+sort3 uses: Selection Sort
+
+How do you know?: It takes 14 sec. to run one loop in sorted 50000 numbers.So, it is bit slower than sort1
+

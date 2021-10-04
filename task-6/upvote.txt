@@ -1,0 +1,46 @@
+package main
+
+import (
+	"context"
+	"log"
+        "fmt"
+	"github.com/vartanbeno/go-reddit/v2/reddit"
+       )
+
+var ctx = context.Background()
+
+func main() {
+	if err := run(); err != nil {
+		log.Fatal(err)
+	}
+}
+
+func run() (err error) {
+	credentials := reddit.Credentials{ID: "", Secret: "", Username: "", Password: ""}
+	client, err := reddit.NewClient(credentials)
+	
+	if err != nil {
+		return
+	}
+	
+	posts, _, err := client.Subreddit.NewPosts(ctx, "memes", &reddit.ListPostOptions{
+	    ListOptions: reddit.ListOptions{
+		Limit: 100,
+	    },
+	    Time: "all",
+	})
+	
+	if err != nil {
+		return
+	}
+
+	for _, post := range posts {
+		_, err := client.Post.Upvote(ctx, post.FullID)
+	        if err != nil {
+    	               return err
+                }
+	}
+	
+
+	return
+}
